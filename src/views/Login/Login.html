@@ -1,0 +1,39 @@
+<div>
+  <div class="login">
+    <img src="@/assets/images/login_top_visual.png" />
+    <div class="login-welcome">Welcome</div>
+    <div class="login-subtitle">Sogeti Declarations</div>
+    <div class="login-container">
+      <section class="login-section">
+        <div v-if="!promptPassword">
+          <h1>Please fill in your username</h1>
+          <input type="text" v-model="username" v-on:keyup.enter.stop="next()" placeholder="Type in your username" />
+        </div>
+        <div v-if="promptPassword">
+          <h1>And now your password</h1>
+          <input
+            type="password"
+            v-model="password"
+            v-on:keyup.enter.stop="login()"
+            placeholder="Type in your password"
+          />
+        </div>
+      </section>
+      <footer class="login-footer">
+        <div v-if="!promptPassword">
+          <button class="btn-flat" v-if="!username.length" disabled>Next</button>
+          <button class="btn-flat-secondary" v-if="username.length" @click="next()">
+            Next
+          </button>
+        </div>
+        <div v-if="promptPassword">
+          <button class="btn-flat" v-if="!password.length" disabled>Login</button>
+          <button class="btn-flat-secondary" v-if="password.length" @click="login()">
+            Login
+          </button>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <div class="modal fade-out-with-delay"></div>
+</div>

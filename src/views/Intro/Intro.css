@@ -1,0 +1,87 @@
+.intro {
+  display: table;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ebebeb;
+}
+
+.centered {
+  position: relative;
+  display: table-cell;
+  width: 100vw;
+  height: 100vh;
+  vertical-align: middle;
+}
+
+.circle {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 270px;
+  height: 270px;
+  border-radius: 135px;
+  background-color: #0070ad;
+}
+
+.sogi-bot {
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 180px;
+}
+
+.pulse {
+  animation-duration: 1s;
+  animation-name: pulse-keyframes;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.grow {
+  animation-duration: 2s;
+  animation-name: grow-keyframes;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+.fade-out {
+  animation-duration: 1.5s;
+  animation-name: fade-out-keyframes;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+@keyframes pulse-keyframes {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes grow-keyframes {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(4);
+  }
+}
+
+@keyframes fade-out-keyframes {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

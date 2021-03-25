@@ -1,0 +1,26 @@
+.fixed-round-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+}
+
+.fixed-round-button .fab {
+  position: relative;
+  width: 4px;
+  height: 50px;
+  margin-left: 39px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.fixed-round-button .fab:after {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: -23px;
+  width: 50px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: white;
+}

@@ -1,0 +1,173 @@
+/* --- Variables ------------------------------------------------------------ */
+
+:root {
+  --primary-color: #0070ad;
+  --inactive-color: #ececec;
+  --secondary-color: #2b0a3d;
+  --success-color: #00c37b;
+  --awaiting-color: #ff6327;
+  --concept-color: #f7f7f7;
+  --flat-button-active: #5528a3;
+  --webpage-font: 'Ubuntu', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* --- Reset ---------------------------------------------------------------- */
+
+body,
+button,
+div,
+header,
+img,
+input,
+ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+/* --- Element Selectors ---------------------------------------------------- */
+
+body {
+  color: var(--secondary-color);
+  font: var(--webpage-font);
+}
+
+div {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* --- Class Selectors ------------------------------------------------------ */
+
+.login-top-visual {
+  width: 80%;
+}
+
+.navbar {
+  height: 33px;
+  color: white;
+}
+
+p {
+  font-size: 0.6em;
+  color: var(--primary-color);
+}
+
+/* --- ID Selectors --------------------------------------------------------- */
+
+#app {
+  text-align: center;
+  font-family: var(--webpage-font);
+}
+h2 {
+  font-size: 18pt;
+  font-weight: bold;
+  color: #2b0a3d;
+  font-family: var(--webpage-font);
+}
+h3 {
+  color: #2b0a3d;
+  font-family: var(--webpage-font);
+}
+
+/* --- Button --------------------------------------------------------------- */
+
+button {
+  width: 300px;
+  height: 55px;
+  border: none;
+  background-color: transparent;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  font-family: var(--webpage-font);
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.btn-navigation {
+  color: var(--primary-color);
+}
+
+.btn-flat-secondary {
+  color: #fff;
+  background-color: var(--secondary-color);
+  padding: 15px 50px 15px 50px;
+  border-radius: 30px;
+}
+
+.btn-flat-primary {
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 14px 50px 14px 50px;
+  border-radius: 30px;
+}
+
+.btn-flat-cancel {
+  color: var(--primary-color);
+  background-color: #fff;
+  padding: 14px 50px 14px 50px;
+  border-radius: 30px;
+  border: var(--primary-color) solid 1px;
+}
+
+.btn-flat:disabled {
+  background-color: var(--inactive-color);
+  color: var(--secondary-color);
+  padding: 14px 50px 14px 50px;
+  border-radius: 30px;
+}
+
+.btn-flat:active {
+  background-color: var(--flat-button-active);
+}
+
+/* --- Input ---------------------------------------------------------------- */
+
+input {
+  height: 46px;
+  background-color: var(--concept-color);
+  font-family: var(--webpage-font);
+  border: 0;
+}
+
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator,
+input[type='date']::-webkit-clear-button {
+  display: none;
+  -webkit-appearance: none;
+}
+
+input[type='date'] {
+  -webkit-appearance: none;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='number'],
+input[type='date'] {
+  width: 100%;
+  padding: 0 66px 0 11px;
+  font-size: 15px;
+}
+
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='number']:focus,
+input[type='date']:focus {
+  border-bottom: 4px solid var(--secondary-color);
+  outline: none;
+}
+
+::placeholder {
+  font-size: 15px;
+  color: grey;
+}

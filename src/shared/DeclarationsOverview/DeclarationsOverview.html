@@ -1,0 +1,22 @@
+<div class="declarations-overview">
+  <h5>{{ title }}</h5>
+  <div class="declarations-list" v-for="items in ammenities">
+    <div class="declarations-status-color">
+      <div
+        v-bind:class="{ 'concept': items.status === 'Concept', 'paid': items.status === 'Paid', 'requested': items.status === 'Requested' }"
+      ></div>
+    </div>
+    <div class="declarations-item">
+      {{ items.item }}
+      <div class="declarations-place">
+        {{ items.place }}
+      </div>
+    </div>
+    <div class="declarations-status">
+      {{ items.status }}
+      <div class="declarations-date">
+        {{ items.date }}
+      </div>
+    </div>
+  </div>
+</div>

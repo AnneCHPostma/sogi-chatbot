@@ -1,0 +1,39 @@
+.declaration-container {
+  z-index: 88;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 55px 16px 14px 16px;
+  background-color: #fff;
+}
+
+.sogeti-logo {
+  width: 84px;
+  margin: 4px 0 16px 0;
+}
+
+.declaration-overview {
+  text-align: left;
+  font-size: 20px;
+}
+
+.declaration-overview-section {
+  margin-bottom: 32px;
+}
+
+.declaration-overview-header,
+.declaration-overview-value {
+  margin-bottom: 8px;
+}
+
+.declaration-overview-header {
+  font-weight: bolder;
+}
+
+.declaration-overview-buttons {
+  text-align: center;
+}
+
+.declaration-overview-buttons button {
+  margin-bottom: 16px;
+}

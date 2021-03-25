@@ -1,0 +1,56 @@
+<div>
+  <div class="chat-block" :class="{'user': type === 'user' || type === 'upload-preview'}">
+    <img v-if="type === 'sogi-bot'" src="@/assets/images/sogeti_bot-avatar.png" class="sogi-bot-avatar" />
+    <img v-if="type === 'bot'" src="@/assets/images/chatbot_bot-avatar.png" class="bot-avatar" />
+    <img v-if="type === 'user'" src="@/assets/images/chatbot_user-avatar.png" class="user-avatar" />
+    <img v-if="type === 'upload-preview'" src="@/assets/images/chatbot_user-avatar.png" class="user-avatar" />
+    <div
+      v-if="type === 'user' || type === 'bot' || type === 'sogi-bot'"
+      class="chatbox-container"
+      :class="{'user': type === 'user'}"
+    >
+      <div class="chatbox" :class="{'user': type === 'user'}">
+        <span v-html="message"></span>
+      </div>
+    </div>
+    <div v-if="type === 'options'" class="flex-container options-panel">
+      <div class="flex-item" @click="addDeclarationType('Food')">
+        <span class="option">Food</span>
+      </div>
+      <div class="flex-item" @click="addDeclarationType('Travel')">
+        <span class="option">Travel</span>
+      </div>
+      <div class="flex-item" @click="addDeclarationType('Training')">
+        <span class="option">Training</span>
+      </div>
+      <div class="flex-item" @click="addDeclarationType('Hotel')">
+        <span class="option">Hotel</span>
+      </div>
+      <div class="flex-item" @click="addDeclarationType('Gifts')">
+        <span class="option">Gifts</span>
+      </div>
+      <div class="flex-item" @click="addDeclarationType('Other')">
+        <span class="option">Other</span>
+      </div>
+    </div>
+    <div v-if="type === 'check'" class="flex-container yes-no">
+      <div class="button-right" @click="addDeclarationAttachment(true)">
+        <button class="btn-flat-primary yes">Yes</button>
+      </div>
+      <div class="button-left" @click="addDeclarationAttachment(false)">
+        <button class="btn-flat-cancel no">No</button>
+      </div>
+    </div>
+    <div v-if="type === 'finalOptions'" class="flex-container">
+      <div class="button-right" @click="navigateTo('landing')">
+        <button class="btn-flat-primary home">Homepage</button>
+      </div>
+      <div class="button-left" @click="navigateTo('overview')">
+        <button class="btn-flat-primary overview">Overview</button>
+      </div>
+    </div>
+    <div v-if="type === 'upload-preview'" class="chatbox-container user">
+      <img :src="message" class="document-preview" />
+    </div>
+  </div>
+</div>

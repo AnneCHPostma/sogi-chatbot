@@ -1,0 +1,26 @@
+div.landing-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin-top: 74px;
+  padding: 0 16px 14px 16px;
+}
+
+.landing-declarations-overview {
+  margin-top: 30px;
+}
+
+.landing-footer {
+  margin-top: 550px;
+  left: 0;
+  width: 100%;
+}
+
+.landing-footer button {
+  position: absolute;
+  bottom: 27px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}

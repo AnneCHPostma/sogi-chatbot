@@ -1,0 +1,63 @@
+<div class="declaration-container">
+  <div class="declaration-overview">
+    <img class="sogeti-logo" src="@/assets/svg/sogeti_logo.svg" alt="Sogeti logo" />
+    <div class="declaration-overview-section">
+      <div class="declaration-overview-header">
+        Declaration type
+      </div>
+      <div class="declaration-overview-value">
+        {{ declarationType }}
+      </div>
+      <div class="declaration-overview-header">
+        Declaration number
+      </div>
+      <div class="declaration-overview-value">
+        {{ Math.floor(Math.random() * 99999) + 200000 }}
+      </div>
+      <div class="declaration-overview-header">
+        Sent
+      </div>
+      <div class="declaration-overview-value">
+        {{ declarationDate }}
+      </div>
+    </div>
+    <div class="declaration-overview-section">
+      <div class="declaration-overview-header">
+        Employee number
+      </div>
+      <div class="declaration-overview-value">
+        {{ Math.floor(Math.random() * 9999) + 30000 }}
+      </div>
+      <div class="declaration-overview-header">
+        Name
+      </div>
+      <div class="declaration-overview-value">
+        {{ userName }}
+      </div>
+      <div class="declaration-overview-header">
+        Bank account
+      </div>
+      <div class="declaration-overview-value">
+        {{ Math.floor(Math.random() * 99) }}NLING{{ Math.floor(Math.random() * 999999999) }}
+      </div>
+      <div class="declaration-overview-header">
+        Cost
+      </div>
+      <div class="declaration-overview-value">
+        {{ declarationCost }}
+      </div>
+    </div>
+    <div class="declaration-overview-section">
+      <div class="declaration-overview-header">
+        Note
+      </div>
+      <div class="declaration-overview-value">
+        {{ declarationNote }}
+      </div>
+    </div>
+    <div class="declaration-overview-buttons">
+      <button class="btn-flat-primary" @click="declarationSent()">Send</button>
+      <button class="btn-flat-cancel" @click="closeOverview()">Cancel</button>
+    </div>
+  </div>
+</div>

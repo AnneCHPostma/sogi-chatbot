@@ -1,0 +1,20 @@
+<div>
+  <header class="menu-header">
+    <div class="hamburger" @click="toggleMenu">
+      <input type="checkbox" />
+      <div class="hamburger-lines">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+  <nav class="menu-navigation" v-if="isActive">
+    <ul>
+      <li @click="showHome">Homepage</li>
+      <li @click="showOverview">Overview</li>
+      <li @click="addDeclaration">Add new declaration</li>
+      <li @click="logOut">Logout</li>
+    </ul>
+  </nav>
+</div>

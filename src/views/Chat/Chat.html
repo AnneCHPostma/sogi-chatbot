@@ -1,0 +1,39 @@
+<div>
+  <Header />
+  <div class="chat-container">
+    <div ref="chatcontainer"></div>
+    <div>
+      <div class="input-group" v-if="step < 4" >
+        <input type="text" :disabled="declarationType.length === 0" v-on:keyup.enter.stop="addDeclarationLocation()" :placeholder="placeholderText" v-model="declarationLocationValue" />
+        <SendChatButton v-if="declarationLocationValue.length > 0" v-on:click.native="addDeclarationLocation()" :text="declarationLocationValue" />
+      </div>
+      <div class="input-group" v-if="step > 3 && step < 6" >
+        <input type="number" v-on:keyup.enter.stop="addDeclarationCost()" pattern="[0-9]*" v-model="declarationCostValue" placeholder="0,00">
+        <SendChatButton v-on:click.native="addDeclarationCost()" :text="declarationCost" />
+      </div>
+      <div ref="dateinput" class="input-group" v-if="step === 6">
+        <input type="date" v-on:keyup.enter.stop="addDeclarationDate()" v-model="declarationDateValue">
+        <SendChatButton v-on:click.native="addDeclarationDate()" :text="declarationDateValue"/>
+      </div>
+      <div class="input-group" v-if="step > 6 && step < 9" >
+        <input type="text" disabled :placeholder="placeholderDisabledText" />
+      </div>
+      <div class="input-group" v-if="step > 8 && step < 10">
+        <input type="text" disabled :placeholder="placeholderUploadText" />
+        <div id="triggerUpload" style="position:absolute; left:0; right:0; top:0; bottom:0;" @click="triggerUpload"></div>
+        <input ref="uploadAttachment" type="file" accept="image/*" @change="loadFile($event)" hidden />
+        <SendChatButton :text="placeholderDefaultText" />
+      </div>
+      <div class="input-group" v-if="step > 10 && step < 12">
+        <input type="text" spellcheck="false" v-on:keyup.enter.stop="addDeclarationNote()" v-model="declarationNoteValue" placeholder="Type here to add a note">
+        <SendChatButton v-on:click.native="addDeclarationNote()" :text="declarationNoteValue"/>
+      </div>
+      <button v-if="step > 12 && step < 15" class="btn-flat-primary" @click="showDeclarationOverview()" style="margin-bottom: 22px;">Open form</button>
+      <div class="input-group" v-if="step > 12">
+        <input type="text" :placeholder="placeholderDefaultText" />
+        <SendChatButton />
+      </div>
+    </div>
+  </div>
+  <DeclarationOverview v-if="showOverview" />
+</div>

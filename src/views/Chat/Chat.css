@@ -1,0 +1,20 @@
+.chat-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 44px;
+  padding: 16px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group input[type='text']:disabled {
+  background-color: #a3a2a2;
+}
+
+.input-group input[type='text']:disabled::placeholder {
+  color: #fff;
+  opacity: 1;
+}

@@ -1,0 +1,10 @@
+<div>
+    <Header />
+    <div class="landing-container">
+        <ChatBlock type="sogi-bot" :message="welcomeMessage" delay="false" slide="true" />
+        <DeclarationsOverview class="landing-declarations-overview" title="Updates" />
+    </div>
+    <footer class="landing-footer">
+        <button class="btn-flat-primary" @click="navigateToChat()">Add declaration</button>
+    </footer>
+</div>
